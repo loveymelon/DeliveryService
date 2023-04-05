@@ -33,16 +33,16 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            if textField.text != "" {
-                loginVo.idValue = textField.text
-                print(loginVo.idValue!)
-                passwardTextField.becomeFirstResponder()
-            }
-            if textField == passwardTextField, passwardTextField.text != ""{
-                loginVo.passwardValue = textField.text
-                print(loginVo.passwardValue!)
-                passwardTextField.resignFirstResponder()
-            }
+        if textField.text != "" {
+            loginVo.idValue = textField.text
+            print(loginVo.idValue!)
+            passwardTextField.becomeFirstResponder()
+        }
+        if textField == passwardTextField, passwardTextField.text != ""{
+            loginVo.passwardValue = textField.text
+            print(loginVo.passwardValue!)
+            passwardTextField.resignFirstResponder()
+        }
             return true
          }
 }
